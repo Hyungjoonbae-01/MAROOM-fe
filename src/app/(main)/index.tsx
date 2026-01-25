@@ -1,3 +1,12 @@
-import { HomePage } from "../../pages/home";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
 
-export default HomePage;
+export default function Index() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/home"); 
+  }, []);
+
+  return null; 
+}
