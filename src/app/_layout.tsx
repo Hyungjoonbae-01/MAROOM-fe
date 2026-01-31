@@ -7,6 +7,13 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
+import {
+  NotoSans_400Regular,
+  NotoSans_700Bold,
+} from "@expo-google-fonts/noto-sans";
+import {
+  Sansation_400Regular,
+} from "@expo-google-fonts/sansation";
 import { MainLayout } from "../pages/00_main-layout";
 
 export default function RootLayout() {
@@ -15,6 +22,9 @@ export default function RootLayout() {
     Poppins_500Medium,
     Poppins_600SemiBold,
     Poppins_700Bold,
+    NotoSans_400Regular,
+    NotoSans_700Bold,
+    Sansation_400Regular,
   });
   if (!fontsLoaded) return null;
 
