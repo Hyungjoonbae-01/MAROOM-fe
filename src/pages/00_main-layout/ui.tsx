@@ -14,7 +14,7 @@ export function MainLayout() {
           {/* 하위 페이지 렌더링 */}
           <Slot />
         </SafeAreaView>
-        <BottomTabs /> /*SafeAreaView 에서 분리 호환성 문제*/
+        <BottomTabs /> {/*SafeAreaView 에서 분리 호환성 문제*/}
       </View>
     </GestureHandlerRootView>
   );
