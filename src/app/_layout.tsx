@@ -11,22 +11,24 @@ import {
   NotoSans_400Regular,
   NotoSans_700Bold,
 } from "@expo-google-fonts/noto-sans";
-import {
-  Sansation_400Regular,
-} from "@expo-google-fonts/sansation";
+
+import { useAppFonts } from "../shared/assets/fonts";
 import { MainLayout } from "../pages/00_main-layout";
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({
+  const [googleFontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
     Poppins_600SemiBold,
     Poppins_700Bold,
     NotoSans_400Regular,
     NotoSans_700Bold,
-    Sansation_400Regular,
   });
-  if (!fontsLoaded) return null;
+
+  const [appFontsLoaded] = useAppFonts();
+  if (!googleFontsLoaded || !appFontsLoaded) {
+    return null; // or splash screen
+  }
 
   return <MainLayout />;
 }
