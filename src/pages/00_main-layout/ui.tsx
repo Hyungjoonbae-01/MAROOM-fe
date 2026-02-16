@@ -11,12 +11,17 @@ export function MainLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: "white" }}>
-        {isAndroid ? (
+        {isAndroid ? 
+        // ===========안드로이드===========
+        (
           <SafeAreaView style={{ flex: 1 }}>
             <Slot />
             <BottomTabs />
           </SafeAreaView>
-        ) : (
+        ) 
+        : 
+        // ===========IOS===========
+        (
           <>
             <SafeAreaView style={{ flex: 1 }}>
               <Slot />
