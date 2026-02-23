@@ -6,7 +6,13 @@ import { Video, ResizeMode } from "expo-av";
 export function SplashPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace("/home"); // must match your file name
+      const isLoggedIn = false; // Replace later with real auth check
+
+      if (isLoggedIn) {
+        router.replace("/home");
+      }
+
+      router.replace("/login");
     }, 3000);
 
     return () => clearTimeout(timer);
