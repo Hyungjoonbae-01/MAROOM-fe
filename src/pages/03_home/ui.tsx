@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import { SwipeCardDeck } from "../../widgets/swipe-card-stack";
-import { fetchFurnitureItems } from "../../entities/product/api";
+import { fetchFurnitureItemsTEMP } from "../../entities/product/api";
 import { Product } from "../../entities/product/type";
 
 export function HomePage() {
@@ -11,7 +11,7 @@ export function HomePage() {
   useEffect(() => {
     async function load() {
       try {
-        const data = await fetchFurnitureItems();
+        const data = await fetchFurnitureItemsTEMP();
         setProducts(data);
       } catch (error) {
         console.error("Failed to fetch furniture:", error);
