@@ -115,8 +115,9 @@ export function ExplorePage() {
       <FilterModal
         visible={filterOpen}
         onClose={() => setFilterOpen(false)}
-        onApply={() => {
+        onApply={(_filter) => {
           setFilterOpen(false);
+          // TODO: apply filter to product list
         }}
       />
     </View>
